@@ -1,15 +1,15 @@
-require 'json'
+# require 'json'
 
-package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+# package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
 
 Pod::Spec.new do |s|
   s.name         = "RNBeginBackgroundTask"
-  s.version      = package['version']
-  s.summary      = package['description']
-  s.license      = package['license']
+  s.version      = "0.1.1"
+  s.summary      = "React Native wrapper for beginBackgroundTask, iOS only"
+  s.license      = "MIT"
 
-  s.authors      = package['author']
-  s.homepage     = package['repository']
+  s.authors      = "Alexander Sandberg <hi@alexandersandberg.com>"
+  s.homepage     = "https://github.com/alexandersandberg/react-native-begin-background-task"
   s.platform     = :ios, "10.0"
 
   s.source       = { :git => "https://github.com/alexandersandberg/react-native-begin-background-task.git", :tag => "v#{s.version}" }
